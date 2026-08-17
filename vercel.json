@@ -1,0 +1,11 @@
+{
+   "buildCommand": "cd apps/storefront && npm install && npm run build",
+   "outputDirectory": "apps/storefront/.next",
+   "framework": "nextjs",
+   "rewrites": [
+      {
+         "source": "/(.*)",
+         "destination": "/apps/storefront/$1"
+      }
+   ]
+}
