@@ -9,7 +9,8 @@ import { Heading } from '@/components/native/heading'
 import { Separator } from '@/components/native/separator'
 import prisma from '@/lib/prisma'
 import { isVariableValid } from '@/lib/utils'
-
+export const dynamic = 'force-dynamic'
+export const revalidate = 0
 export default async function Index() {
    const products = await prisma.product.findMany({
       include: {

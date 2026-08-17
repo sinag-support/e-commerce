@@ -11,7 +11,8 @@ type Props = {
    params: { productId: string }
    searchParams: { [key: string]: string | string[] | undefined }
 }
-
+export const dynamic = 'force-dynamic'
+export const revalidate = 0
 export async function generateMetadata(
    { params, searchParams }: Props,
    parent: ResolvingMetadata

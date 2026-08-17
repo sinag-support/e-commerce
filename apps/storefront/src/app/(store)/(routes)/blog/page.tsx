@@ -1,6 +1,7 @@
 import { BlogPostCard } from '@/components/native/BlogCard'
 import prisma from '@/lib/prisma'
-
+export const dynamic = 'force-dynamic'
+export const revalidate = 0
 export default async function Index() {
    const blogs = await prisma.blog.findMany({
       include: { author: true },
